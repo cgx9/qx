@@ -1,3 +1,5 @@
+/*************************************
+
 [rewrite_local]
 ^https:\/\/api\.mojidict\.com\/app\/mojiread\/parse\/functions\/getNPrivileges-v2 url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/mojiread.js
 
