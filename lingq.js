@@ -13,7 +13,7 @@ var d = JSON.parse($response.body);
 const url = $request.url;
 
 //if(d.prices){
-if(d.results && d.results.length>0)
+if(d.results && d.results.length>0){
     d.results[0]['role'] = 'Premium'
     d.results[0]['use_classic_mode'] = false
     d.results[0]['is_beta_tester'] = true
