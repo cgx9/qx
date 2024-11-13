@@ -23,7 +23,7 @@ if(d.prices){
 if(d.profiles){
     try{
     var b = {
-        "role" = "Premium",
+        "role" : "Premium",
         "expires_date" : "2099-09-09 09:09:09 Etc/GMT",
         "purchase_date" : "2023-09-09 09:09:09 Etc/GMT",
         "is_beta_tester" : true
