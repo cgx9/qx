@@ -1,7 +1,7 @@
 /*************************************
 
 [rewrite_local]
-^https:\/\/www\.lingq\.com\/api\/v2\/apple\/purchase\/ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/lingq.js
+^https:\/\/www\.lingq\.com\/api\/v2\/apple\/purchase\/ url script-request-body https://raw.githubusercontent.com/cgx9/qx/main/lingq.js
 
 [mitm]
 hostname = www.lingq.com
@@ -9,7 +9,7 @@ hostname = www.lingq.com
 *************************************/
 
 
-var d = JSON.parse($response.body);
+var d = JSON.parse($request.body);
 const url = $request.url;
 console.log(d)
 
