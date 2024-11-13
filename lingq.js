@@ -17,6 +17,7 @@ if(d.prices){
     //d.results[0]['role'] = 'premium'
     //d.results[0]['use_classic_mode'] = false
     d.prices['premiumAuto.ja'] = 0.00
+    d.prices['premiumAuto.ja.nt'] = 0.00
     d.prices['premiumAuto12.ja'] = 0.00
     d.prices['premiumAuto12.ja.nt'] = 0.00
 }
