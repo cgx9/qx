@@ -21,13 +21,19 @@ if(d.prices){
     d.prices['premiumAuto12.ja.nt'] = 0.00
 }
 if(d.profiles){
+    try{
     var b = {
-        'role' = 'Premium',
+        "role" = "Premium",
         "expires_date" : "2099-09-09 09:09:09 Etc/GMT",
         "purchase_date" : "2023-09-09 09:09:09 Etc/GMT",
-        "is_beta_tester" : false,
+        "is_beta_tester" : true
     }
     d.profiles.push(b)
+
+    }catch(e){
+        console.log(e)
+    }
+
 }
 console.log(d)
 $done({body : JSON.stringify(d)});
