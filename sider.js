@@ -1,8 +1,7 @@
 /*************************************
 
 [rewrite_local]
-^https:\/\/api\.sider\.ai\/api\/v1\/completion\/limit\/user url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/sider.js
-https://api1.sider.ai/api/v1/completion/limit/user?app_name=ChitChat_Chrome_Ext&app_version=4.28.0&tz_name=Asia/Shanghai
+^https:\/\/api1\.sider\.ai\/api\/v1\/completion\/limit\/user url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/sider.js
 
 [mitm]
 hostname = api1.sider.ai
