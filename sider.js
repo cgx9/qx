@@ -25,6 +25,11 @@ if (d.data) {
   d.data["gpt_4_chat"]["remain"] = "99999";
   d.data["search"]["count"] = "99999";
   d.data["search"]["remain"] = "99999";
+  d.data["summarize"]["count"] = "99999";
+  d.data["summarize"]["remain"] = "99999";
+  d.data["web_page"]["count"] = "99999";
+  d.data["web_page"]["remain"] = "99999";
+
   //d.prices['premiumAuto.ja'] = 0.00
   //d.prices['premiumAuto.ja.nt'] = 0.00
   //d.prices['premiumAuto12.ja'] = 0.00
