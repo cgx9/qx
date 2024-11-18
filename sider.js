@@ -13,6 +13,7 @@ const url = $request.url;
 
 //if(d.prices){
 if (d.data) {
+  d.data["is_trial"] = true;
   d.data["user_type"] = "premium_ultra";
   d.data["user_type_detail"] = "premium_ultra";
   d.data["basic_credit"]["count"] = "99999";
