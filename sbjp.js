@@ -13,10 +13,10 @@ var d = JSON.parse($response.body);
 //if(d.prices){
 if (d.data) {
   d.data["vipExpireTime"] = "2099-12-30 00:00:00";
-  d.data["payVip"] = true;
-  d.data["emailVeriffied"] = true;
+  d.data["payVip"] = false;
+  d.data["emailVerified"] = true;
   d.data["vip"] = true;
-
+  d.data["score"] = 999999;
   //d.prices['premiumAuto.ja'] = 0.00
   //d.prices['premiumAuto.ja.nt'] = 0.00
   //d.prices['premiumAuto12.ja'] = 0.00
