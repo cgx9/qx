@@ -1,7 +1,7 @@
 /*************************************
 
 [rewrite_local]
-^https:\/\/www\.sbry\.tech\/api\/user\/d$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/sbjp.js
+^https:\/\/www\.sbry\.tech\/api\/user\/\d{0,8}$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/sbjp.js
 [mitm]
 hostname = www.sbry.tech
 
