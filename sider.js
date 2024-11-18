@@ -1,10 +1,10 @@
 /*************************************
 
 [rewrite_local]
-^https:\/\/api1\.sider\.ai\/api\/v1\/completion\/limit\/user url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/sider.js
+^https:\/\/(api\d*\.sider\.ai|sider\.ai)\/api\/v1\/completion\/limit\/user url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/sider.js
 
 [mitm]
-hostname = api1.sider.ai
+hostname = api1.sider.ai,sider.ai
 
 *************************************/
 
@@ -12,7 +12,7 @@ var d = JSON.parse($response.body);
 const url = $request.url;
 
 //if(d.prices){
-if (url.pathname == "/api/v1/completion/limit/user" && d.data) {
+if (d.data) {
   d.data["user_type"] = "premium_ultra";
   d.data["user_type_detail"] = "premium_ultra";
   d.data["basic_credit"]["count"] = "99999";
