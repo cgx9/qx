@@ -11,12 +11,12 @@ hostname = api1.sider.ai
 var d = JSON.parse($response.body);
 const url = $request.url;
 
-if (d.data && d.data.list) {
+if (url.pathname == "/api/v1/audio/voice/list" && d.data && d.data.list) {
   d.data.list = d.data.list.map((item) => {
     item.need_premium = false;
     return item;
   });
 }
 
-console.log(d);
+console.log(url.pathname);
 $done({ body: JSON.stringify(d) });

@@ -12,7 +12,7 @@ var d = JSON.parse($response.body);
 const url = $request.url;
 
 //if(d.prices){
-if (d.data) {
+if (url.pathname == "/api/v1/completion/limit/user" && d.data) {
   d.data["user_type"] = "premium_ultra";
   d.data["user_type_detail"] = "premium_ultra";
   d.data["basic_credit"]["count"] = "99999";
@@ -35,6 +35,5 @@ if (d.data) {
   //d.prices['premiumAuto12.ja'] = 0.00
   //d.prices['premiumAuto12.ja.nt'] = 0.00
 }
-
-console.log(d);
+console.log(url.pathname);
 $done({ body: JSON.stringify(d) });
