@@ -30,6 +30,7 @@ if (d.data) {
   d.data["summarize"]["remain"] = "99999";
   d.data["web_page"]["count"] = "99999";
   d.data["web_page"]["remain"] = "99999";
+  d.data["feature_used"]["tts"] = 0;
 
   //d.prices['premiumAuto.ja'] = 0.00
   //d.prices['premiumAuto.ja.nt'] = 0.00
