@@ -1,7 +1,7 @@
 /*************************************
 
 [rewrite_local]
-^https:\/\/routine\.wqxsw\.com\/flames\/vides\/entry\/\d{4}$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/jinyushortvideo.js
+^https:\/\/routine\.wqxsw\.com\/flames\/video\/entry\/\d{4}$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/jinyushortvideo.js
 [mitm]
 hostname = routine.wqxsw.com
 
