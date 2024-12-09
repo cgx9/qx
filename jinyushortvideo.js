@@ -12,6 +12,7 @@ var d = JSON.parse($response.body);
 if(d.data && d.data.resultVideoList){
     const vlist = d.data.resultVideoList.map( item => {
         item.payStatus = 0
+        return item;
     } )
     d.data.resultVideoList = vlist;
 }
