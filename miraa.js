@@ -1,7 +1,7 @@
 /*************************************
 [rewrite_local]
 ^https:\/\/api\.myoland\.com\/quotas\/miraa\/(transcribe|ai-explain) url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/miraa.js
-^https:\/\/api\.myoland\.com\/transcribes\/miraa\/runpod url script-request-body https://raw.githubusercontent.com/cgx9/qx/main/miraa.js
+^https:\/\/api\.myoland\.com\/transcribes\/miraa\/runners/runpod url script-request-body https://raw.githubusercontent.com/cgx9/qx/main/miraa.js
 
 [mitm]
 hostname = api.myoland.com
