@@ -11,7 +11,7 @@ if($request.url.indexOf('runpod') !=-1){
   let requestBody = $request.body;
     
     let requestJson = JSON.parse(requestBody);
-    requestJson.audioDuration = 1;
+    requestJson.audioDuration = 0;
     requestBody = JSON.stringify(requestJson);
     $done({ body: requestBody });
     if($response.body){
