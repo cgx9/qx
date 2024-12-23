@@ -8,8 +8,7 @@ hostname = api.myoland.com
 
 var d = JSON.parse($response.body);
 
-if (d.data) {
-  d.data['quota'] = 999999
-}
-console.log(d.data);
+d['quota'] = 999999
+
+console.log(d);
 $done({ body: JSON.stringify(d) });
