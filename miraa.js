@@ -7,7 +7,7 @@
 hostname = api.myoland.com
 
 *************************************/
-if($request.url.indexof('runpod') !=-1){
+if($request.url.indexOf('runpod') !=-1){
   let requestBody = $request.body;
     
     let requestJson = JSON.parse(requestBody);
