@@ -7,13 +7,16 @@
 hostname = api.myoland.com
 
 *************************************/
-if($request.url.indexof('runpod') !=-1 ){
+if($request.url.indexof('runpod') !=-1){
   let requestBody = $request.body;
     
     let requestJson = JSON.parse(requestBody);
     requestJson.audioDuration = 1;
     requestBody = JSON.stringify(requestJson);
     $done({ body: requestBody });
+    if($response.body){
+      $done({ body: $response.body });
+    }
 }else{
   var d = JSON.parse($response.body);
 
@@ -22,4 +25,4 @@ if($request.url.indexof('runpod') !=-1 ){
   console.log(d);
   $done({ body: JSON.stringify(d) });
 }
-$done({ body: $response.body });
+
