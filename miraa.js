@@ -22,7 +22,7 @@ if($request.url.indexOf('runpod') !=-1){
 
   d['quota'] = 999999
   d['usage'] = 0
-  console.log(d);
+  console.log(JSON.stringify(d));
   $done({ body: JSON.stringify(d) });
 }
 
