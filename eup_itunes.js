@@ -6,14 +6,14 @@
 hostname = buy.itunes.apple.com
 */
 
-var response = JSON.parse($response.body);
+let response = JSON.parse($response.body);
 console.log("source:")
-console.log(response)
-var bundle_ids = {"com.eup.mytest":"com.eup.mytest", "mobi.eup.jpnews":"mobi.eup.jpnews","com.myoland.miraa":"miraa_pro_yearly"};
+console.log(JSON.stringify(response))
+let bundle_ids = {"com.eup.mytest":"com.eup.mytest", "mobi.eup.jpnews":"mobi.eup.jpnews","com.myoland.miraa":"miraa_pro_yearly"};
 
 const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const bundle_id = response.receipt["bundle_id"] || response.receipt["Bundle_Id"];
-
+console.log("UA:", ua)
 // 定义产品 ID
 const yearid = `${bundle_id}.year`;
 const yearlyid = `${bundle_id}.yearly`;
@@ -75,5 +75,5 @@ response.product_id = id;
 response.latest_receipt = 'xxx';
 response.status = 0;
 console.log("target:")
-console.log(response)
+console.log(JSON.stringify(response))
 $done({ body: JSON.stringify(response) });
