@@ -7,8 +7,8 @@ hostname = buy.itunes.apple.com,p25-buy.itunes.apple.com
 */
 
 let response = JSON.parse($response.body);
-console.log("source:")
-console.log(JSON.stringify(response))
+// console.log("source:")
+// console.log(JSON.stringify(response))
 // https://v2.migii.net/purchase/verifiedAppleStore
 let bundle_ids = {"com.eup.mytest":"com.eup.mytest", "mobi.eup.jpnews":"com.eup.eja.sub12","com.myoland.miraa":"miraa_pro_yearly"};
 
@@ -37,15 +37,16 @@ const receipt = {
     "transaction_id": "999999999999999",
     "product_id": yearlyid,
     "original_transaction_id": "999999999999999",
-    "original_purchase_date_ms": purchaseDateMs,
-    'original_purchase_date': purchaseDate,
-    'original_purchase_date_pst': purchaseDatePST,
+    
     "is_trial_period": "false",
     "in_app_ownership_type": "PURCHASED",
     "subscription_group_identifier": "20877951",
     'is_in_intro_offer_period': 'false',
 }
 // 'expires_date': '4102444799000',maybe
+//"original_purchase_date_ms": purchaseDateMs,
+// 'original_purchase_date': purchaseDate,
+// 'original_purchase_date_pst': purchaseDatePST,
 let data;
 for (const i in bundle_ids) {
     const regex = new RegExp('^' + i, 'i'); 
@@ -91,6 +92,6 @@ response.environment = 'Production';
 response.receipt_type = 'Production';
 response.latest_receipt = 'xxx';
 response.status = 0;
-// console.log("target:")
-// console.log(JSON.stringify(response))
+console.log("target:")
+console.log(JSON.stringify(response))
 $done({ body: JSON.stringify(response) });
