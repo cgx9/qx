@@ -58,7 +58,7 @@ for (const i in bundle_ids) {
       response.pending_renewal_info = [
         {
           'product_id': product_id,
-          'original_transaction_id': '1000000000000000',
+          'original_transaction_id': '999999999999999',
           'auto_renew_product_id': product_id,
           'auto_renew_status': '1'
         }
@@ -78,7 +78,7 @@ if (!data) {
     response.pending_renewal_info = [
       {
         'product_id': yearlyid,
-        'original_transaction_id': '1000000000000000',
+        'original_transaction_id': '999999999999999',
         'auto_renew_product_id': yearlyid,
         'auto_renew_status': '1'
       }
