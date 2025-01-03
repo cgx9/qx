@@ -49,7 +49,7 @@ for (const i in bundle_ids) {
       const product_id = bundle_ids[i];
       const receiptdata = Object.assign({}, receipt, { product_id}); 
       data = [receiptdata];
-      
+      console.log('productid is:',product_id)
       response.pending_renewal_info = [
         {
           'product_id': product_id,
@@ -58,7 +58,10 @@ for (const i in bundle_ids) {
           'auto_renew_status': '1'
         }
       ];
-      response.receipt = receiptdata
+      response.receipt.in_app = data;
+      response.latest_receipt_info = data;
+    //   response.receipt = receiptdata
+        // response.receipt = Object.assign({}, response.receipt, );
       response.product_id = product_id;
       break;
     }
@@ -84,5 +87,6 @@ response.environment = 'Production';
 response.receipt_type = 'Production';
 response.latest_receipt = 'xxx';
 response.status = 0;
-console.log("target:", JSON.stringify(response))
+console.log("target:")
+console.log(JSON.stringify(response))
 $done({ body: JSON.stringify(response) });
