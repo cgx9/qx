@@ -77,6 +77,5 @@ response.receipt_type = 'Production';
 // response.product_id = product_id;
 response.latest_receipt = 'xxx';
 response.status = 0;
-console.log("target:")
-console.log(JSON.stringify(response))
+// console.log("target:",response)
 $done({ body: JSON.stringify(response) });
