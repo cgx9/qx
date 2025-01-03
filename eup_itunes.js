@@ -21,10 +21,14 @@ const yearlyid = `${bundle_id}.yearly`;
 const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
+const currentDate = new Date();
+const purchaseDate = currentDate.toISOString().replace('T', ' ').replace('Z', ' Etc/GMT');
+const purchaseDatePST = purchaseDate.replace("Etc/GMT", "America/Los_Angeles")
+const purchaseDateMs = currentDate.getTime().toString();
 const receipt = {
     "quantity": "1",
-    "purchase_date": '2025-01-01 23:59:59 Etc/GMT',
-    'purchase_date_ms': '1735890000000',
+    "purchase_date": purchaseDate,
+    'purchase_date_ms': purchaseDateMs,
     "expires_date": "2099-12-31 05:05:05 Etc/GMT",
     'expires_date_pst': '2099-12-31 23:59:59 America/Los_Angeles',
     'expires_date_ms': '4102444799000',
@@ -33,9 +37,9 @@ const receipt = {
     "transaction_id": "999999999999999",
     "product_id": yearlyid,
     "original_transaction_id": "999999999999999",
-    "original_purchase_date_ms": "1735890000000",
-    'original_purchase_date': '2025-01-01 23:59:59 Etc/GMT',
-    'original_purchase_date_pst': '2025-01-01 12:00:00 America/Los_Angeles',
+    "original_purchase_date_ms": purchaseDateMs,
+    'original_purchase_date': purchaseDate,
+    'original_purchase_date_pst': purchaseDatePST,
     "is_trial_period": "false",
     "in_app_ownership_type": "PURCHASED",
     "subscription_group_identifier": "20877951",
@@ -87,6 +91,6 @@ response.environment = 'Production';
 response.receipt_type = 'Production';
 response.latest_receipt = 'xxx';
 response.status = 0;
-console.log("target:")
-console.log(JSON.stringify(response))
+// console.log("target:")
+// console.log(JSON.stringify(response))
 $done({ body: JSON.stringify(response) });
