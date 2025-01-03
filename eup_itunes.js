@@ -35,9 +35,9 @@ const receipt = {
     'expires_date_ms': '4102444799000',
     'expires_date_formatted': '2099-12-31 23:59:59 Etc/GMT',
     'expires_date_formatted_pst': '2099-12-31 23:59:59 America/Los_Angeles',
-    "transaction_id": "999999999999999",
+    "transaction_id": "1000000000000000",
     "product_id": yearlyid,
-    "original_transaction_id": "999999999999999",
+    "original_transaction_id": "1000000000000000",
     "original_purchase_date_ms": "1633072800000",
     "original_purchase_date": "2021-10-01 12:00:00 Etc/GMT",
     "is_trial_period": "false",
@@ -60,7 +60,7 @@ for (const i in bundle_ids) {
       response.pending_renewal_info = [
         {
           'product_id': product_id,
-          'original_transaction_id': '999999999999999',
+          'original_transaction_id': '1000000000000000',
           'auto_renew_product_id': product_id,
           'auto_renew_status': '1'
         }
@@ -80,7 +80,7 @@ if (!data) {
     response.pending_renewal_info = [
       {
         'product_id': yearlyid,
-        'original_transaction_id': '999999999999999',
+        'original_transaction_id': '1000000000000000',
         'auto_renew_product_id': yearlyid,
         'auto_renew_status': '1'
       }
@@ -91,8 +91,8 @@ if (!data) {
 
 response.latest_receipt_info = data;
 response.environment = 'Production';
-response.receipt_type = 'Production';
-response.latest_receipt = 'xxx';
+// response.receipt_type = 'Production';
+// response.latest_receipt = 'xxx';
 response.status = 0;
 console.log("target:")
 console.log(JSON.stringify(response))
