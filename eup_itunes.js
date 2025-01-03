@@ -59,6 +59,7 @@ for (const i in bundle_ids) {
 if (!data) {
     data = [Object.assign({}, receipt)];
     response.product_id = yearlyid;
+    response.receipt.in_app = data;
     response.pending_renewal_info = [
       {
         'product_id': yearlyid,
@@ -70,12 +71,11 @@ if (!data) {
     
 }
 // 添加或修改其他信息
-response.receipt.in_app = data;
+
 response.latest_receipt_info = data;
 response.environment = 'Production';
 response.receipt_type = 'Production';
-// response.product_id = product_id;
 response.latest_receipt = 'xxx';
 response.status = 0;
-console.log("target:",response)
+console.log("target:", response)
 $done({ body: JSON.stringify(response) });
