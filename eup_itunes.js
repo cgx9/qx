@@ -72,7 +72,7 @@ response.receipt.in_app = data;
 response.latest_receipt_info = data;
 response.environment = 'Production';
 response.receipt_type = 'Production';
-response.product_id = id;
+response.product_id = product_id;
 response.latest_receipt = 'xxx';
 response.status = 0;
 console.log("target:")
