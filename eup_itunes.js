@@ -27,6 +27,8 @@ const receipt = {
     "expires_date": "2099-12-31 05:05:05 Etc/GMT",
     'expires_date_pst': '2099-12-31 23:59:59 America/Los_Angeles',
     'expires_date_ms': '4102444799000',
+    'expires_date_formatted': '2099-12-31 23:59:59 Etc/GMT',
+    'expires_date_formatted_pst': '2099-12-31 23:59:59 America/Los_Angeles',
     "transaction_id": "999999999999999",
     "product_id": yearlyid,
     "original_transaction_id": "999999999999999",
@@ -35,6 +37,7 @@ const receipt = {
     "subscription_group_identifier": "20877951",
     'is_in_intro_offer_period': 'false',
 }
+// 'expires_date': '4102444799000',maybe
 let data;
 for (const i in bundle_ids) {
     const regex = new RegExp('^' + i, 'i'); 
@@ -77,5 +80,5 @@ response.environment = 'Production';
 response.receipt_type = 'Production';
 response.latest_receipt = 'xxx';
 response.status = 0;
-console.log("target:", response)
+console.log("target:", JSON.stringify(response))
 $done({ body: JSON.stringify(response) });
