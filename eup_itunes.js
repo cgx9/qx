@@ -14,7 +14,7 @@ let bundle_ids = {"com.eup.mytest":"com.eup.mytest", "mobi.eup.jpnews":"com.eup.
 
 const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const bundle_id = response.receipt["bundle_id"] || response.receipt["Bundle_Id"];
-console.log("UA:", ua)
+// console.log("UA:", ua)
 // 定义产品 ID
 const yearid = `${bundle_id}.year`;
 const yearlyid = `${bundle_id}.yearly`;
@@ -77,5 +77,5 @@ response.receipt_type = 'Production';
 // response.product_id = product_id;
 response.latest_receipt = 'xxx';
 response.status = 0;
-// console.log("target:",response)
+console.log("target:",response)
 $done({ body: JSON.stringify(response) });
