@@ -3,13 +3,14 @@
 ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/eup_itunes.js
 
 [mitm]
-hostname = buy.itunes.apple.com
+hostname = buy.itunes.apple.com,p25-buy.itunes.apple.com
 */
 
 let response = JSON.parse($response.body);
 console.log("source:")
 console.log(JSON.stringify(response))
-let bundle_ids = {"com.eup.mytest":"com.eup.mytest", "mobi.eup.jpnews":"mobi.eup.jpnews","com.myoland.miraa":"miraa_pro_yearly"};
+// https://v2.migii.net/purchase/verifiedAppleStore
+let bundle_ids = {"com.eup.mytest":"com.eup.mytest", "mobi.eup.jpnews":"com.eup.eja.sub12","com.myoland.miraa":"miraa_pro_yearly"};
 
 const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const bundle_id = response.receipt["bundle_id"] || response.receipt["Bundle_Id"];
