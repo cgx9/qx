@@ -23,7 +23,8 @@ const lifetimeid = `${bundle_id}.lifetime`;
 
 const receipt = {
     "quantity": "1",
-    "purchase_date": new Date().toISOString(),
+    "purchase_date": '2025-01-01 23:59:59 Etc/GMT',
+    'purchase_date_ms': '1735890000000',
     "expires_date": "2099-12-31 05:05:05 Etc/GMT",
     'expires_date_pst': '2099-12-31 23:59:59 America/Los_Angeles',
     'expires_date_ms': '4102444799000',
@@ -32,6 +33,9 @@ const receipt = {
     "transaction_id": "999999999999999",
     "product_id": yearlyid,
     "original_transaction_id": "999999999999999",
+    "original_purchase_date_ms": "1735890000000",
+    'original_purchase_date': '2025-01-01 23:59:59 Etc/GMT',
+    'original_purchase_date_pst': '2025-01-01 12:00:00 America/Los_Angeles',
     "is_trial_period": "false",
     "in_app_ownership_type": "PURCHASED",
     "subscription_group_identifier": "20877951",
