@@ -52,11 +52,13 @@ for (const i in bundle_ids) {
         }
       ];
       response.receipt = receiptdata
+      response.product_id = product_id;
       break;
     }
 }
 if (!data) {
     data = [Object.assign({}, receipt)];
+    response.product_id = yearlyid;
     response.pending_renewal_info = [
       {
         'product_id': yearlyid,
@@ -72,7 +74,7 @@ response.receipt.in_app = data;
 response.latest_receipt_info = data;
 response.environment = 'Production';
 response.receipt_type = 'Production';
-response.product_id = product_id;
+// response.product_id = product_id;
 response.latest_receipt = 'xxx';
 response.status = 0;
 console.log("target:")
