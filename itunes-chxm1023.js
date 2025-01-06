@@ -18,7 +18,7 @@ const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
   'com.idealityapp.VideoEditing': { cm: 'timea', hx: 'hxpda', id: "MagicVideo_Vip_Permanent", latest: "chxm1023" },  // 魔影-视频剪辑
-  'mobi.eup.jpnews': { cm: 'timea', hx: 'hxpda', id: "com.eup.eja.sub12", latest: "chxm1023" },  // 魔影-视频剪辑
+  'mobi.eup.jpnews': { cm: 'timeb', hx: 'hxpda', id: "com.eup.eja.sub12", latest: "chxm1023" },  // 魔影-视频剪辑
   'YinzhangMaster': { cm: 'timeb', hx: 'hxpda', id: "com.xiaoqi.seal.forever", latest: "chxm1023" },  // 印章大师
 };
 
