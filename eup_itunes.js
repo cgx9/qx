@@ -29,7 +29,7 @@ const receipt = {
     'purchase_date': '2021-10-01 12:00:00 Etc/GMT',
     'purchase_date_ms': '1633072800000',
     'purchase_date_pst': '2021-10-01 12:00:00 America/Los_Angeles',
-    'expires_date': '2099-12-31 05:05:05 Etc/GMT',
+    'expires_date': '2099-12-31 23:59:59 Etc/GMT',
     'expires_date_pst': '2099-12-31 23:59:59 America/Los_Angeles',
     'expires_date_ms': '4102444799000',
     'expires_date_formatted': '2099-12-31 23:59:59 Etc/GMT',
@@ -52,7 +52,7 @@ let data;
 for (const i in bundle_ids) {
     const regex = new RegExp('^' + i, 'i'); 
     if (regex.test(ua) || regex.test(bundle_id)) {
-      const product_id = "com.eup.eja.sub12"//bundle_ids[i];
+      const product_id = bundle_ids[i];//"com.eup.eja.sub12"//
       const receiptdata = Object.assign({}, receipt, { product_id}); 
       console.log('-------receiptdata---------')
 
