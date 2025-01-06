@@ -14,7 +14,6 @@ let bundle_ids = {"com.eup.mytest":"com.eup.mytest", "mobi.eup.jpnews":"com.eup.
 
 const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const bundle_id = response.receipt["bundle_id"] || response.receipt["Bundle_Id"];
-// console.log("UA:", ua)
 // 定义产品 ID
 const yearid = `${bundle_id}.year`;
 const yearlyid = `${bundle_id}.yearly`;
@@ -53,7 +52,7 @@ let data;
 for (const i in bundle_ids) {
     const regex = new RegExp('^' + i, 'i'); 
     if (regex.test(ua) || regex.test(bundle_id)) {
-      const product_id = bundle_ids[i];
+      const product_id = "com.eup.eja.sub12"//bundle_ids[i];
       const receiptdata = Object.assign({}, receipt, { product_id}); 
       data = [receiptdata];
       console.log('productid is:',product_id)
@@ -98,6 +97,5 @@ response.latest_receipt = 'xxx';
 response.status = 0;
 console.log("target:")
 console.log(JSON.stringify(response['receipt']['in_app']))
-console.log(response['receipt']['in_app']['receiptreceipt'])
 
 $done({ body: JSON.stringify(response) });
