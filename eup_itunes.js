@@ -56,7 +56,7 @@ for (const i in bundle_ids) {
       const receiptdata = Object.assign({}, receipt, { product_id}); 
       console.log('-------receiptdata---------')
 
-      console.log(receiptdata)
+      console.log(JSON.stringify(receiptdata))
       data = [receiptdata];
       console.log('productid is:',product_id)
       response.pending_renewal_info = [
