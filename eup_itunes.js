@@ -54,9 +54,11 @@ for (const i in bundle_ids) {
     if (regex.test(ua) || regex.test(bundle_id)) {
       const product_id = "com.eup.eja.sub12"//bundle_ids[i];
       const receiptdata = Object.assign({}, receipt, { product_id}); 
+      console.log('-------receiptdata---------')
+
+      console.log(receiptdata)
       data = [receiptdata];
       console.log('productid is:',product_id)
-      console.log('-------sub12---------')
       response.pending_renewal_info = [
         {
           'product_id': product_id,
