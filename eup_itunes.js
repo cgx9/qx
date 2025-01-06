@@ -96,6 +96,6 @@ response.receipt_type = 'Production';
 response.latest_receipt = 'xxx';
 response.status = 0;
 console.log("target:")
-console.log(JSON.stringify(response['receipt']['in_app']))
+console.log(JSON.stringify(response['receipt1']['in_app']))
 
 $done({ body: JSON.stringify(response) });
