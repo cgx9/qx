@@ -7,8 +7,9 @@ hostname = buy.itunes.apple.com
 */
 
 let response = JSON.parse($response.body);
-// console.log("source:")
-// console.log(JSON.stringify(response))
+console.log("source:")
+console.log(JSON.stringify(response))
+$done({ body: JSON.stringify(response) });
 // https://v2.migii.net/purchase/verifiedAppleStore
 let bundle_ids = {"com.eup.mytest":"com.eup.mytest", "mobi.eup.jpnews":"com.eup.eja.sub12","com.myoland.miraa":"miraa_pro_yearly"};
 
