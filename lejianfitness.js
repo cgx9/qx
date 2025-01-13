@@ -13,8 +13,8 @@ if(responseJson.result){
   res['deleted'] = 0;
   res['vipAmount'] = 1;
   res['userType'] = 1;
-  res['membershipLevel'] = 2;
-  res['expiryTime'] = '2025-01-01 20:00:49'
+  res['membershipLevel'] = 3;
+  res['expiryTime'] = '2026-01-01 23:00:00'
 
   responseJson.result = res;
 }
