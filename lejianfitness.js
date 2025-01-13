@@ -14,7 +14,7 @@ if(responseJson.result){
   res['vipAmount'] = 1;
   res['userType'] = 1;
   res['membershipLevel'] = 2;
-  res['expiryTime'] = '2026-01-21 20:00:49'
+  res['expiryTime'] = '2025-01-01 20:00:49'
 
   responseJson.result = res;
 }
