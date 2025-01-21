@@ -1,11 +1,10 @@
 /*
 [rewrite_local]
 ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/eup_itunes.js
-^https?:\/\/gateway\.icloud\.com\/setup\/purchase\/verify$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/eup_itunes.js
 ^https?:\/\/mzstorekit\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/eup_itunes.js
 
 [mitm]
-hostname = buy.itunes.apple.com, gateway.icloud.com, mzstorekit.itunes.apple.com
+hostname = buy.itunes.apple.com,  mzstorekit.itunes.apple.com
 */
 
 let response = JSON.parse($response.body);
