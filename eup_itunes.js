@@ -38,13 +38,13 @@ const receipt = {
   purchase_date: "2021-10-01 12:00:00 Etc/GMT",
   purchase_date_ms: "1633072800000",
   purchase_date_pst: "2021-10-01 12:00:00 America/Los_Angeles",
-  expires_date: "2099-12-31 23:59:59 Etc/GMT",
-  expires_date_pst: "2099-12-31 23:59:59 America/Los_Angeles",
-  expires_date_ms: "4102444799000",
-  expires_date_formatted: "2099-12-31 23:59:59 Etc/GMT",
-  expires_date_formatted_pst: "2099-12-31 23:59:59 America/Los_Angeles",
+  // expires_date: "2099-12-31 23:59:59 Etc/GMT",
+  // expires_date_pst: "2099-12-31 23:59:59 America/Los_Angeles",
+  // expires_date_ms: "4102444799000",
+  // expires_date_formatted: "2099-12-31 23:59:59 Etc/GMT",
+  // expires_date_formatted_pst: "2099-12-31 23:59:59 America/Los_Angeles",
   transaction_id: "1000000000000001",
-  product_id: yearlyid,
+  product_id: "com.eup.eja.ra.newh", //yearlyid,
   original_transaction_id: "1000000000000001",
   original_purchase_date_ms: "1633072800000",
   original_purchase_date: "2021-10-01 12:00:00 Etc/GMT",
@@ -68,14 +68,16 @@ for (const i in bundle_ids) {
     console.log(JSON.stringify(receiptdata));
     data = [receiptdata];
     console.log("productid is:", product_id);
-    response.pending_renewal_info = [
-      {
-        product_id: product_id,
-        original_transaction_id: "1000000000000001",
-        auto_renew_product_id: product_id,
-        auto_renew_status: "1",
-      },
-    ];
+    if (product_id != "com.eup.eja.ra.newh") {
+      response.pending_renewal_info = [
+        {
+          product_id: product_id,
+          original_transaction_id: "1000000000000001",
+          auto_renew_product_id: product_id,
+          auto_renew_status: "1",
+        },
+      ];
+    }
     response.receipt.in_app = data;
     response.receipt.receipt_type = "Production";
     response.latest_receipt_info = data;
