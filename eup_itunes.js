@@ -11,7 +11,8 @@ console.log("source:")
 console.log(JSON.stringify(response))
 $done({ body: JSON.stringify(response) });
 // https://v2.migii.net/purchase/verifiedAppleStore
-let bundle_ids = {"com.eup.mytest":"com.eup.mytest", "mobi.eup.jpnews":"com.eup.eja.sub12","com.myoland.miraa":"miraa_pro_yearly"};
+// com.eup.eja.sub12
+let bundle_ids = {"com.eup.mytest":"com.eup.mytest", "mobi.eup.jpnews":"com.eup.eja.ra.newh","com.myoland.miraa":"miraa_pro_yearly"};
 
 const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const bundle_id = response.receipt["bundle_id"] || response.receipt["Bundle_Id"];
