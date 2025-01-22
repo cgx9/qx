@@ -27,5 +27,5 @@ if($request.url.indexOf('init-login') !=-1){
     }
   }
 }
-console.log(JSON.stringify(d));
+// console.log(JSON.stringify(d));
 $done({ body: JSON.stringify(d) });

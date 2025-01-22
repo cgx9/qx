@@ -9,13 +9,14 @@ hostname = product.eupgroup.net
 
 var d = JSON.parse($response.body);
 // d['Ads'] = null;
+d['Ads']['end_ios'] = d['Ads']['timeServer'];
 d['Ads']['top_1_ios'] = null;
 d['Ads']['top_2_ios'] = null;
 d['Ads']['top_3_ios'] = null;
 let sale = [
     {
       "premium" : "preforevermonths",
-      "percent" : "99"
+      "percent" : "90"
     },
     {
       "premium" : "pre12months",
@@ -23,7 +24,7 @@ let sale = [
     },
     {
       "premium" : "pre3months",
-      "percent" : "30"
+      "percent" : "50"
     }
   ]
 d['Ads']['sale_ios'] = sale;
