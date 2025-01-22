@@ -3,7 +3,7 @@
 ^https:\/\/easyjapanese\.net\/api\/user\/init-login url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/eup_jlpt.js
 api/test-full/5bb185f42b6d67068116813d
 ^https:\/\/jlpt\.mazii\.net\/api\/test-full\/\S+$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/eup_jlpt.js
-^https:\/\/easyjapanese\.net\/api\/test\/jlpt\/{d}$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/eup_jlpt.js
+^https:\/\/easyjapanese\.net\/api\/test\/jlpt\/\d$ url script-response-body https://raw.githubusercontent.com/cgx9/qx/main/eup_jlpt.js
 
 
 [mitm]
