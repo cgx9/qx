@@ -9,7 +9,7 @@ hostname = easyjapanese.net
 
 var d = JSON.parse($response.body);
 
-d["result"]["is_premium"] = "true"
+d["result"]["is_premium"] = true
 d["result"]["premium_expired"] = "2035-01-03 13:37:24"
 console.log(JSON.stringify(d));
 $done({ body: JSON.stringify(d) });

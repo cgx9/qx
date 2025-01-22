@@ -12,10 +12,10 @@ var d = JSON.parse($response.body);
 d['Ads']['top_1_ios'] = null;
 d['Ads']['top_2_ios'] = null;
 d['Ads']['top_3_ios'] = null;
-d['Ads']['sale_ios'] = [
+let sale = [
     {
       "premium" : "preforevermonths",
-      "percent" : "100"
+      "percent" : "99"
     },
     {
       "premium" : "pre12months",
@@ -25,7 +25,8 @@ d['Ads']['sale_ios'] = [
       "premium" : "pre3months",
       "percent" : "30"
     }
-  ];
+  ]
+d['Ads']['sale_ios'] = sale;
 console.log(JSON.stringify(d));
 $done({ body: JSON.stringify(d) });
 
